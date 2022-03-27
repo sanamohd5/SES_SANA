@@ -20,14 +20,14 @@ public class TestClassCourse extends TestBase {
 	@Test(priority=1)     //Verifying add course functionality by taking data from excel sheet
 	public void verifyAddCourse() throws IOException {
 		objcourse = new CoursePage(driver);		
-		objcourse= new CoursePage(driver);
+	//	objcourse= new CoursePage(driver);
 		objcourse.course();
 		objcourse.Addcourse();
 		String coursename = ExcelUtility.getCellData(0, 3);
 	    String certifyname = ExcelUtility.getCellData(0, 4);
 	    String coursecode = ExcelUtility.getCellData(0, 5);
 	    String coursedetail = ExcelUtility.getCellData(0, 6);
-	    double courseprice = ExcelUtility.getCellData1(0, 7);	  
+	    String courseprice = ExcelUtility.getCellData(0, 7);	
 	    String eligibility = ExcelUtility.getCellData(0, 8);	    
 	    objcourse.setcoursename(coursename);				    
 	    objcourse.setcertifyname(certifyname);				    
@@ -51,7 +51,7 @@ public class TestClassCourse extends TestBase {
 		 objcourse.clearcoursedetail();
 		 String coursedetail = ExcelUtility.getCellData(1, 6);
 		 objcourse.clearcourseprice();
-		 double courseprice = ExcelUtility.getCellData1(1, 7);
+		 String courseprice = ExcelUtility.getCellData(1, 7);
 		 objcourse.cleareligibility();
 		 String eligibility = ExcelUtility.getCellData(1, 8);
 		 objcourse.clearimage();
@@ -64,13 +64,38 @@ public class TestClassCourse extends TestBase {
 		 objcourse.simageupload();
 		 objcourse.addcourse();
 		 }
+	 @Test(priority=3)    //Verifying Invalid course functionality by taking data from excel sheet
+	 public void VerifyInvalidCourse() throws IOException {
+		 objcourse.edit();
+		 objcourse.clearcoursename();
+		 String coursename = ExcelUtility.getCellData(2, 3);
+		 objcourse.clearcertifyname();		
+		 String certifyname = ExcelUtility.getCellData(2, 4);
+		 objcourse.clearcoursecode();	
+		 String coursecode = ExcelUtility.getCellData(2, 5);
+		 objcourse.clearcoursedetail();
+		 String coursedetail = ExcelUtility.getCellData(2, 6);
+		 objcourse.clearcourseprice();
+		 String courseprice = ExcelUtility.getCellData(2, 7);
+		 objcourse.cleareligibility();
+		 String eligibility = ExcelUtility.getCellData(2, 8);
+		 objcourse.clearimage();
+		 objcourse.setcoursename(coursename);				    
+		 objcourse.setcertifyname(certifyname);				    
+		 objcourse.setcoursecode(coursecode);				   
+		 objcourse.setcoursedetail(coursedetail);				   
+		 objcourse.setcourseprice(courseprice);				    
+		 objcourse.seteligibility(eligibility);				 
+		 objcourse.simageupload();
+		 objcourse.addcourse();
+		 }
 	  
-	 @Test(priority=3)   //Verifying whether data added is updated in knowmore
+	 @Test(priority=4)   //Verifying whether data added is updated in knowmore
 	 public void VerifyKnowMore() {
 		 objcourse.knowmore();
 		 }
 	 
-	 @Test(priority=4)  //Verifying whether a course can be deleted from courses list
+	 @Test(priority=5)  //Verifying whether a course can be deleted from courses list
 	 public void Verifydelete() {
 		 objcourse.course();		 
 		 objcourse.delete();		

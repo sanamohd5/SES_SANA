@@ -2,7 +2,6 @@ package com.StudentEnrollment.scripts;
 
 import java.io.IOException;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -10,7 +9,6 @@ import org.testng.annotations.Test;
 
 import com.stdentenrollment.testbase.TestBase;
 import com.studentenrollment.constants.AutomationConstants;
-import com.studentenrollment.pages.CoursePage;
 import com.studentenrollment.pages.LoginPage;
 import com.studentenrollment.utilities.ExcelUtility;
 
@@ -47,7 +45,6 @@ public class TestClassLogin extends TestBase {
 		objLogin = new LoginPage(driver);
 	    objLogin.clearusername();
 	    objLogin.clearpassword();
-	    objLogin.clickLoginH();
 	    String username = ExcelUtility.getCellData(2, 0);
 	    String password = ExcelUtility.getCellData(2, 1);
 	    String role = ExcelUtility.getCellData(2, 2);
@@ -71,7 +68,6 @@ public class TestClassLogin extends TestBase {
 		objLogin = new LoginPage(driver);
 	    objLogin.clearusername();
 	    objLogin.clearpassword();
-	    objLogin.clickLoginH();
 	    String username = ExcelUtility.getCellData(3, 0);
 	    String password = ExcelUtility.getCellData(3, 1);
 	    String role = ExcelUtility.getCellData(3, 2);
@@ -94,7 +90,6 @@ public class TestClassLogin extends TestBase {
 		objLogin = new LoginPage(driver);
 	    objLogin.clearusername();
 	    objLogin.clearpassword();
-	    objLogin.clickLoginH();
 	    String username = ExcelUtility.getCellData(4, 0);
 	    String password = ExcelUtility.getCellData(4, 1);
 	    String role = ExcelUtility.getCellData(4, 2);
@@ -118,7 +113,6 @@ public class TestClassLogin extends TestBase {
 		objLogin = new LoginPage(driver);
 	    objLogin.clearusername();
 	    objLogin.clearpassword();
-	    objLogin.clickLoginH();
 	    String username = ExcelUtility.getCellData(5, 0);
 	    String password = ExcelUtility.getCellData(5, 1);
 	    String role = ExcelUtility.getCellData(5, 2);
@@ -142,7 +136,6 @@ public class TestClassLogin extends TestBase {
 		objLogin = new LoginPage(driver);
 	    objLogin.clearusername();
 	    objLogin.clearpassword();
-	    objLogin.clickLoginH();
 	    String username = ExcelUtility.getCellData(0, 0);
 	    String password = ExcelUtility.getCellData(0, 1);
 	    String role = ExcelUtility.getCellData(0, 2);

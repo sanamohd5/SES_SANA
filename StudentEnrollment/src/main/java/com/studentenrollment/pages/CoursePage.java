@@ -63,8 +63,8 @@ public void setcoursecode(String scoursecode){
 public void setcoursedetail(String scoursedetail){
 	coursedetail.sendKeys(scoursedetail);              	
 	}
-public void setcourseprice(double scourseprice){
-	courseprice.sendKeys("([2000])");
+public void setcourseprice(String scourseprice){
+	courseprice.sendKeys(scourseprice);
 	}
 public void seteligibility(String seligibility){
 	eligibility.sendKeys(seligibility);              	

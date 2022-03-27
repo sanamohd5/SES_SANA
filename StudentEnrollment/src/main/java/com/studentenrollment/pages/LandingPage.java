@@ -14,16 +14,13 @@ WebDriver driver;
     @FindBy(xpath="//*[@id=\"home\"]/div/div/div/div/div/div/a")  
     private WebElement gothrough;
     @FindBy(xpath="//button[@class=\"btn btn-primary\"]")
-    private WebElement showmoreH; 
-    @FindBy(xpath="//i[@class=\"icon ion-android-mail\"]")
-    private WebElement email;
+    private WebElement showmoreH;     
     @FindBy(xpath="//i[@class=\"icon ion-social-facebook\"]")
     private WebElement facebook;
     @FindBy(xpath="//i[@class=\"icon ion-social-twitter\"]")
     private WebElement twitter;
     @FindBy(xpath="//i[@class=\"icon ion-social-instagram\"]")
     private WebElement instagram;
-    
             
 public LandingPage(WebDriver driver) {
 	this.driver = driver;

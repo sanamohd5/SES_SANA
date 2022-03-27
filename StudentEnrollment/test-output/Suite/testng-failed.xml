@@ -6,10 +6,8 @@
       <class name="com.StudentEnrollment.scripts.TestClassCourse">
         <methods>
           <include name="onSetup"/>
-          <include name="VerifyKnowMore"/>
           <include name="quitBrowser"/>
-          <include name="VerifyInvalidCourse"/>
-          <include name="Verifydelete"/>
+          <include name="VerifyUpdateCourse"/>
         </methods>
       </class> <!-- com.StudentEnrollment.scripts.TestClassCourse -->
     </classes>

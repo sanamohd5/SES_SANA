@@ -3,7 +3,9 @@ package com.studentenrollment.utilities;
 	import java.io.FileInputStream;
 	import java.io.IOException;
 
-	import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 	import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 	public class ExcelUtility  {
 
@@ -24,20 +26,11 @@ package com.studentenrollment.utilities;
 		                 + "/TestData.xlsx");
 		excelWBook = new XSSFWorkbook(ExcelFile);
 		        excelWSheet = excelWBook.getSheetAt(0);
-		        return excelWSheet.getRow(RowNum).getCell(ColNum).getStringCellValue();
-		    }
-		    public static double getCellData1(int RowNum, int ColNum ) throws IOException 
-			  
-		    {
-		      
-		        // Open the Excel file
-		    	 FileInputStream ExcelFile = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources"
-		                 + "/TestData.xlsx");
-		excelWBook = new XSSFWorkbook(ExcelFile);
-		        excelWSheet = excelWBook.getSheetAt(0);
-		        return excelWSheet.getRow(RowNum).getCell(ColNum).getNumericCellValue();
-		    }
-		    
+		        XSSFCell Cell =excelWSheet.getRow(RowNum).getCell(ColNum);
+		        DataFormatter formatter=new DataFormatter();
+		        String val=formatter.formatCellValue(excelWSheet.getRow(RowNum).getCell(ColNum));
+		        return(val);
+		    }		    
 	}
 	
 	
